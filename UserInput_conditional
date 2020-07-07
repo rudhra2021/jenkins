@@ -1,0 +1,20 @@
+pipeline{
+	agent any
+		environment{
+		tool="jenkins"
+		}
+			stages{
+				stage("UserInput"){
+					input{
+						message "Press OK to continue"
+						submitter "lead,admin,manager"
+						parameters {
+							string(name: 'username1', description: 'only lead,admin,manager has the permission')
+						}
+					}
+					steps{
+						echo "User: ${username1} said OK"
+					}
+				}
+			}
+}
