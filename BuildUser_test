@@ -1,0 +1,25 @@
+pipeline{
+	agent any
+		environment{
+		tool="jenkins"
+		}
+			stages{
+				stage("BuildUser"){
+					steps{
+						wrap([$class: 'BuildUser']){
+							script{
+							def user=" ${BUILD_USER}"
+								echo " ${BUILD_USER}  ${user}"
+									if(user == 'admin')
+									{
+									echo "user is admin"
+									}
+									else{
+									echo "user is not admin"
+									}
+							}
+						}
+					}
+				}
+			}
+}
