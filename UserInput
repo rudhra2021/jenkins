@@ -8,7 +8,7 @@ pipeline{
 					steps{
 						
 						input('check the sonar % and select to proceed or not')
-						echo " ${BUILD_USER}"
+						echo "successfullf provided the approval"
 						
 						
 					}
