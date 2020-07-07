@@ -1,0 +1,10 @@
+pipeline{
+agent any
+  stages{
+    stage("Initial-P2"){
+      steps{
+      echo "Hai from P2"
+      }
+    }
+  }
+}
