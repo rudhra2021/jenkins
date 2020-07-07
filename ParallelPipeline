@@ -11,7 +11,7 @@ pipeline{
          stage("P1"){
            steps{
             echo"paralleljobp1"
-            sleep 15
+            sleep 20
             }
           }
         
