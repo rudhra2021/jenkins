@@ -8,7 +8,7 @@ pipeline{
 					steps{
 						wrap([$class: 'BuildUser']){
 							script{
-							def user=" ${BUILD_USER}"
+							def user="${BUILD_USER}"
 								echo " ${BUILD_USER}  ${user}"
 									if(user == 'admin')
 									{
