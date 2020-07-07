@@ -4,7 +4,7 @@ pipeline{
 		tool="jenkins"
 		}
 			stages{
-				stage("Trim"){
+				stage("BuildUser"){
 					steps{
 						wrap([$class: 'BuildUser']){
 							script{
