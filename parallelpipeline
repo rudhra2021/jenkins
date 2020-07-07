@@ -2,17 +2,23 @@ pipeline{
   agent any
     stages{
       stage("initial"){
-      echo "initial stage"
+        step{
+        echo "initial stage"
+        }
       }
         parallel{
           stage("P1"){
-          echo"paralleljobp1"
-          sleep 15
+            step{
+            echo"paralleljobp1"
+            sleep 15
+            }
           }
         
           stage("P2"){
-          echo"paralleljobp2"
-          sleep 15
+            step{
+            echo"paralleljobp2"
+            sleep 15
+            }
           }
         }
     }
