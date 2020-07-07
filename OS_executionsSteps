@@ -2,13 +2,15 @@ pipeline{
 	agent any
 	stages{
 		stage("OSexecution"){
-			script{
-				if(isUnix()){
-				sh "ls -l"
-				}
-				else
-				{
-				bat "dir"
+			steps{
+				script{
+					if(isUnix()){
+					sh "ls -l"
+					}
+					else
+					{
+					bat "dir"
+					}
 				}
 			}
 		}
