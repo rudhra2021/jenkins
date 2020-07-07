@@ -1,0 +1,20 @@
+pipeline{
+	agent any
+		environment{
+		tool="jenkins"
+		}
+			stages{
+				stage("OSexecution"){
+					steps{
+						script{
+							tool1=tool[0..5] 		//jenkin
+							tool2=tool[3..6] 		//kins
+							tool3=tool[3..-1] 		//kins
+							tool4=tool[-7..-1] 		//jenkins
+							tool5=tool[-7..-2] 		//jenkin
+							echo "$tool1 /n $tool2 /n $tool3 /n $tool4 /n $tool5"
+							}
+						}
+					}
+				}
+}
