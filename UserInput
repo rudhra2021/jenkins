@@ -1,0 +1,17 @@
+pipeline{
+	agent any
+		environment{
+		tool="jenkins"
+		}
+			stages{
+				stage("UserInput"){
+					steps{
+						
+						input('check the sonar % and select to proceed or not')
+						echo " ${BUILD_USER}"
+						
+						
+					}
+				}
+			}
+}
