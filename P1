@@ -4,7 +4,7 @@ agent any
     stage("Initial-P1"){
       steps{
       echo "Hai from P1"
-      error
+      
       }
     }
   }
