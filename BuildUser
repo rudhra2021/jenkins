@@ -1,0 +1,17 @@
+pipeline{
+	agent any
+		environment{
+		tool="jenkins"
+		}
+			stages{
+				stage("Trim"){
+					steps{
+						wrap([$class: 'BuildUser']){
+							script{
+								echo " ${BUILD_USER}"
+							}
+						}
+					}
+				}
+			}
+}
