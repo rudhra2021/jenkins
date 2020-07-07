@@ -1,0 +1,12 @@
+pipeline{
+agent any
+  stages{
+    stage("GIT"){
+     steps{
+      script{
+      echo"i am in git stage"
+      }
+     }
+    }
+   }
+}
