@@ -2,9 +2,7 @@ pipeline{
   agent any
     stages{
       stage("initial"){
-        steps{
-        echo "initial stage"
-        }
+       
         parallel{
          stage("P1"){
            steps{
