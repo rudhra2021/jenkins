@@ -17,7 +17,7 @@ agent any
      }
 		 post{
 				always{
-				echo "print always"
+				echo "print always from inside stage STAGE_POST"
 				}
 			}
 	}
