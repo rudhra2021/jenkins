@@ -19,6 +19,23 @@ agent any
 	fixed{
 	echo "fixed from error to success state"
 	}
-	
+	regression{
+	echo "current status is failed/aborted/unstable previous state is success"
+	}
+	aborted{
+	echo "current build is aborted"
+	}
+	failure{
+	echo "execute only if current block is failure"
+	}
+	success{
+	echo "on every build success"
+	}
+	unstable{
+	echo "status is unstable"
+	}
+	cleanup{
+	echo "similar to always will execute always" 
+	}
    }
 }
