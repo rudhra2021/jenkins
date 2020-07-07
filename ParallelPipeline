@@ -5,10 +5,9 @@ pipeline{
         steps{
         echo "initial stage"
         }
-      }
         parallel{
-          stage("P1"){
-            steps{
+         stage("P1"){
+           steps{
             echo"paralleljobp1"
             sleep 15
             }
@@ -21,5 +20,6 @@ pipeline{
             }
           }
         }
+      }
     }
  }
