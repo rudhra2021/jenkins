@@ -9,4 +9,16 @@ agent any
      }
     }
    }
+   post{
+	always{
+	echo "print always"
+	}
+	changed{
+	echo "changed the build status"
+	}
+	fixed{
+	echo "fixed from error to success state"
+	}
+	
+   }
 }
